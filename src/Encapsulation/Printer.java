@@ -53,4 +53,7 @@ public class Printer {
     public int getTonerLevel() {
         return tonerLevel;
     }
+    public int getNumOfPagesPrinted() {
+        return this.numOfPagesPrinted;
+    }
 }

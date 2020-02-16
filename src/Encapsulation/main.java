@@ -11,5 +11,6 @@ public class main {
         myPrinter.print(100);
         myPrinter.fillToner();
         System.out.println(myPrinter.getTonerLevel() + "%");
+        System.out.println("Total: " + myPrinter.getNumOfPagesPrinted() + " pages printed");
     }
 }
