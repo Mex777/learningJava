@@ -1,3 +1,4 @@
+
 public class minutesAndSeconds {
 	public static void main(String[] args) {
 		System.out.println(getDurationString(80, 40));
@@ -15,7 +16,7 @@ public class minutesAndSeconds {
 			String value = "" + XX +"h " + YY + "m " + ZZ + "s ";
 			return value;
 		}
-	}
+	} 
 	public static String getDurationString(int seconds) {
 		if (seconds < 0)
 			return "Invalid value";
