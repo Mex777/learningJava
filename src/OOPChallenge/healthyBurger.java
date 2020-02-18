@@ -4,12 +4,15 @@ public class healthyBurger extends burger {
     private String name = "Healthy Burger";
     private double price = 15d;
     private additions additions;
+    private String breadType = "Brown rye bread roll";
 
 
-    public healthyBurger(String meatType) {
-        super("Brown rye bread roll", meatType);
+
+
+    public healthyBurger() {
+        super();
     }
-
+    // rewritting the addTopigns method.
     public void addTopings(boolean lettuce, boolean tomatoes, boolean carrot, boolean onions, boolean ketchupSauce, boolean mayonnaiseSauce) {
         this.additions = new additions(lettuce, tomatoes, carrot, onions, ketchupSauce, mayonnaiseSauce);
         if (lettuce)
@@ -25,7 +28,25 @@ public class healthyBurger extends burger {
         if (mayonnaiseSauce)
             price += 0.30d;
     }
+    public void getToppings() {
+        this.additions.toppings();
+    }
     public double getBasePrice() {
         return 15d;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public double getPrice() {
+        return price;
+    }
+
+    @Override
+    public String getBreadType() {
+        return breadType;
     }
 }

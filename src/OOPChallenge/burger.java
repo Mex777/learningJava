@@ -5,6 +5,8 @@ public class burger {
     private String meatType;
     private String name = "Regular burger";
     private double price = 10d;
+    private boolean ketchupSauce;
+    private boolean mayonnaiseSauce;
     private additions additions;
 
     public void setBreadType(String breadType) {
@@ -15,18 +17,14 @@ public class burger {
         this.meatType = meatType;
     }
 
-    public burger(String breadType, String meatType) {
-        //System.out.println(getName() + " added. Base price: $" + getBasePrice());
-        this.breadType = breadType;
-        this.meatType = meatType;
-
-    }
+    // Making a burger Constructor
     public burger() {
-        System.out.println(getName() + " added. Base price: $" + getBasePrice());
+        System.out.println("Burger added. Base price: $" + getBasePrice());
     }
-
-    public void addTopings(boolean lettuce, boolean tomatoes, boolean carrot, boolean onions) {
-        this.additions = new additions(lettuce, tomatoes, carrot, onions);
+    // Adding the toppings using the additions class
+    public void addTopings(boolean lettuce, boolean tomatoes, boolean carrot, boolean onions, boolean ketchupSauce, boolean mayonnaiseSauce) {
+        ketchupSauce = false; mayonnaiseSauce = false;
+        this.additions = new additions(lettuce, tomatoes, carrot, onions, ketchupSauce, mayonnaiseSauce);
         if (lettuce)
             price += 2.5d;
         if (tomatoes)
@@ -35,6 +33,10 @@ public class burger {
             price += 5d;
         if (onions)
             price += 0.75d;
+        if (ketchupSauce)
+            price += 0.25d;
+        if (mayonnaiseSauce)
+            price += 0.30d;
     }
 
     public void getToppings() {
