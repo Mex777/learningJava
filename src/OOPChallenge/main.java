@@ -24,20 +24,15 @@ public class main {
             //CHECKING what type of burgers do they want.
             if (burgerType == 1) {
                 go.regularBurger();
-                go.burger.getToppings();
-                System.out.println("Your type of burger is: " + go.burger.getName() + "\nYour type of bread is: " + go.burger.getBreadType() + "\nYour type of meat is: " + go.burger.getMeatType());
-                System.out.println("Your price is: $" + go.burger.getPrice());
             } else if (burgerType == 2) {
                 go.healthyBurger();
-                go.burger.getToppings();
-                System.out.println("Your type of burger is: " + go.burger.getName() + "\nYour type of bread is: " + go.burger.getBreadType() + "\nYour type of meat is: " + go.burger.getMeatType());
-                System.out.println("Your price is: $" + go.burger.getPrice());
             } else if (burgerType == 3) {
                 go.deluxeBurger();
-                go.burger.getToppings();
-                System.out.println("Your type of burger is: " + go.burger.getName() + "\nYour type of bread is: " + go.burger.getBreadType() + "\nYour type of meat is: " + go.burger.getMeatType());
-                System.out.println("Your price is: $" + go.burger.getPrice());
+
             }
+        go.burger.getToppings();
+        System.out.println("Your type of burger is: " + go.burger.getName() + "\nYour type of bread is: " + go.burger.getBreadType() + "\nYour type of meat is: " + go.burger.getMeatType());
+        System.out.println("Your price is: $" + go.burger.getPrice());
 
     }
     public void regularBurger() {
