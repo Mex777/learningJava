@@ -12,17 +12,18 @@ public class cellphone {
     }
 
     public void addContact(String name, long phoneNum) {
-//        if(!checkName(name)) {
-
+        if(!checkName(name)) {
             contacts.add(new Contacts(name, phoneNum));
             System.out.println("Contact added.");
-//        }
-//       else
-//            System.out.println("There's a contact with this name already");
+        }
+       else if (checkName(name))
+            System.out.println("There's a contact with this name already");
     }
     public void removeContact (String name) {
         if(checkName(name))
-            contacts.remove(searchMame(name));
+            contacts.remove(contacts.get(searchMame(name)));
+        else
+            System.out.println("Name not found");
 
     }
     private boolean checkValidity(Contacts contact) {

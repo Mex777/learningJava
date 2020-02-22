@@ -9,6 +9,7 @@ public class main {
 
         getInfo();
         int number = input.nextInt();
+        input.nextLine();
         while (number!=0) {
             switch (number) {
                 case 1:
@@ -33,6 +34,7 @@ public class main {
                     break;
             }
             number = input.nextInt();
+            input.nextLine();
         }
     }
     public static void getInfo() {
@@ -46,12 +48,11 @@ public class main {
     }
     public static void addContact() {
         System.out.print("To add a new contact you should type the name of the Contact and his phone number\n" +
-                "Name:");
+                "Name: ");
         String name = input.nextLine();
-        input.nextLine();
         System.out.print("Phone number: +40");
         long phoneNum = input.nextLong();
-
+        input.nextLine();
         phone.addContact(name, phoneNum);
     }
     public static void removeContact() {
