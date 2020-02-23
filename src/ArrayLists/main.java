@@ -66,7 +66,7 @@ public class main {
         System.out.print("To modify the name you should type the old name of the contact\n" +
                 "Name:");
         String name = input.nextLine();
-        input.nextLine();
+
         System.out.print("Now you should type the new name:");
         String newName = input.nextLine();
         phone.modifyName(name, newName);

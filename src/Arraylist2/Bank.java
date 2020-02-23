@@ -33,6 +33,7 @@ public class Bank {
         else
             System.out.println("Branch is invalid");
     }
+
     public void addTransaction(String branchName,String customerName, double transaction) {
         if (checkName(branchName) >= 0) {
             branches.get(checkName(branchName)).addTransaction(customerName, transaction);
